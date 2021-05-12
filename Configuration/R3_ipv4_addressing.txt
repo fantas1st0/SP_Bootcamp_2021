@@ -1,0 +1,27 @@
+hostname R3
+!
+line console 0
+ logging-sync 45 0
+!
+no ip domain-lookup
+!
+interface Loopback0
+ ip address 3.3.3.3 255.255.255.255
+!
+interface Gi1
+ no shutdown
+!
+interface Gi1.37
+ encapsulation dot1Q 37
+ ip address 10.3.7.3 255.255.255.0
+ no shutdown
+!
+interface Gi1.39
+ encapsulation dot1Q 39
+ ip address 10.3.9.3 255.255.255.0
+ no shutdown
+!
+interface Gi1.313
+ encapsulation dot1Q 313
+ ip address 172.3.13.3 255.255.255.0
+ no shutdown

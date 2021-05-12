@@ -1,0 +1,28 @@
+hostname R9
+!
+line console 0
+ logging-sync 45 0
+!
+no ip domain-lookup
+!
+interface Loopback0
+ ip address 9.9.9.9 255.255.255.255
+!
+interface Gi1
+ no shutdown
+!
+interface Gi1.39
+ encapsulation dot1Q 39
+ ip address 10.3.9.9 255.255.255.0
+ no shutdown
+!
+interface Gi1.59
+ encapsulation dot1Q 59
+ ip address 10.5.9.9 255.255.255.0
+ no shutdown
+!
+interface Gi1.79
+ encapsulation dot1Q 79
+ ip address 10.7.9.9 255.255.255.0
+ no shutdown
+!

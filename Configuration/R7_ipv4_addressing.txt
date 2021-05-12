@@ -1,0 +1,28 @@
+hostname R7
+!
+line console 0
+ logging-sync 45 0
+!
+no ip domain-lookup
+!
+interface Loopback0
+ ipv4 address 7.7.7.7 255.255.255.255
+!
+interface Gi0/0/0/0
+ no shutdown
+!
+interface Gi0/0/0/0.37
+ encapsulation dot1Q 37
+ ipv4 address 10.3.7.7 255.255.255.0
+ no shutdown
+!
+interface Gi0/0/0/0.67
+ encapsulation dot1Q 67
+ ipv4 address 10.6.7.7 255.255.255.0
+ no shutdown
+!
+interface Gi0/0/0/0.79
+ encapsulation dot1Q 79
+ ipv4 address 10.7.9.7 255.255.255.0
+ no shutdown
+!

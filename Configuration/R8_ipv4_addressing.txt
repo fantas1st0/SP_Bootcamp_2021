@@ -1,0 +1,22 @@
+hostname R8
+!
+line console 0
+ logging-sync 45 0
+!
+no ip domain-lookup
+!
+interface Loopback0
+ ip address 8.8.8.8 255.255.255.255
+!
+interface Gi1
+ no shutdown
+!
+interface Gi1.58
+ encapsulation dot1Q 58
+ ip address 10.5.8.8 255.255.255.0
+ no shutdown
+!
+interface Gi1.68
+ encapsulation dot1Q 68
+ ip address 10.6.8.8 255.255.255.0
+ no shutdown

@@ -1,0 +1,18 @@
+hostname R12
+!
+line console 0
+ logging-sync 45 0
+!
+no ip domain-lookup
+!
+interface Loopback0
+ ip address 12.12.12.12 255.255.255.255
+!
+interface Gi1
+ no shutdown
+!
+interface Gi1.212
+ encapsulation dot1Q 212
+ ip address 172.2.12.12 255.255.255.0
+ no shutdown
+!

@@ -1,0 +1,22 @@
+hostname R4
+!
+line console 0
+ logging-sync 45 0
+!
+no ip domain-lookup
+!
+interface Loopback0
+ ip address 4.4.4.4 255.255.255.255
+!
+interface Gi1
+ no shutdown
+!
+interface Gi1.45
+ encapsulation dot1Q 45
+ ip address 10.4.5.4 255.255.255.0
+ no shutdown
+!
+interface Gi1.414
+ encapsulation dot1Q 414
+ ip address 172.4.14.4 255.255.255.0
+ no shutdown

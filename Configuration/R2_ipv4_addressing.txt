@@ -1,0 +1,22 @@
+hostname R2
+!
+line console 0
+ logging-sync 45 0
+!
+no ip domain-lookup
+!
+interface Loopback0
+ ipv4 address 2.2.2.2 255.255.255.255
+!
+interface Gi0/0/0/0
+ no shutdown
+!
+interface Gi0/0/0/0.26
+ encapsulation dot1Q 26
+ ipv4 address 10.2.6.2 255.255.255.0
+ no shutdown
+!
+interface Gi0/0/0/0.212
+ encapsulation dot1Q 212
+ ipv4 address 172.2.12.2 255.255.255.0
+ no shutdown

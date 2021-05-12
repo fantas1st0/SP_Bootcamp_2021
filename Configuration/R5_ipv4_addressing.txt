@@ -1,0 +1,37 @@
+hostname R5
+!
+line console 0
+ logging-sync 45 0
+!
+no ip domain-lookup
+!
+interface Loopback0
+ ip address 5.5.5.5 255.255.255.255
+!
+interface Gi1
+ no shutdown
+!
+interface Gi1.15
+ encapsulation dot1Q 15
+ ip address 10.1.5.5 255.255.255.0
+ no shutdown
+!
+interface Gi1.45
+ encapsulation dot1Q 45
+ ip address 10.4.5.5 255.255.255.0
+ no shutdown
+!
+interface Gi1.56
+ encapsulation dot1Q 56
+ ip address 10.5.6.5 255.255.255.0
+ no shutdown
+!
+interface Gi1.58
+ encapsulation dot1Q 58
+ ip address 10.5.8.5 255.255.255.0
+ no shutdown
+!
+interface Gi1.59
+ encapsulation dot1Q 59
+ ip address 10.5.9.5 255.255.255.0
+ no shutdown

@@ -1,0 +1,32 @@
+hostname R6
+!
+line console 0
+ logging-sync 45 0
+!
+no ip domain-lookup
+!
+interface Loopback0
+ ipv4 address 6.6.6.6 255.255.255.255
+!
+interface Gi0/0/0/0
+ no shutdown
+!
+interface Gi0/0/0/0.26
+ encapsulation dot1Q 26
+ ipv4 address 10.2.6.6 255.255.255.0
+ no shutdown
+!
+interface Gi0/0/0/0.56
+ encapsulation dot1Q 56
+ ipv4 address 10.5.6.6 255.255.255.0
+ no shutdown
+!
+interface Gi0/0/0/0.67
+ encapsulation dot1Q 67
+ ipv4 address 10.6.7.6 255.255.255.0
+ no shutdown
+!
+interface Gi0/0/0/0.68
+ encapsulation dot1Q 68
+ ipv4 address 10.6.8.6 255.255.255.0
+ no shutdown

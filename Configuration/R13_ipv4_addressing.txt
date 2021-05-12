@@ -1,0 +1,18 @@
+hostname R13
+!
+line console 0
+ logging-sync 45 0
+!
+no ip domain-lookup
+!
+interface Loopback0
+ ip address 13.13.13.13 255.255.255.255
+!
+interface Gi1
+ no shutdown
+!
+interface Gi1.313
+ encapsulation dot1Q 313
+ ip address 172.3.13.13 255.255.255.0
+ no shutdown
+!

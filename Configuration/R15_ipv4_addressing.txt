@@ -1,0 +1,18 @@
+hostname R15
+!
+line console 0
+ logging-sync 45 0
+!
+no ip domain-lookup
+!
+interface Loopback0
+ ip address 15.15.15.15 255.255.255.255
+!
+interface Gi1
+ no shutdown
+!
+interface Gi1.115
+ encapsulation dot1Q 115
+ ip address 172.1.15.15 255.255.255.0
+ no shutdown
+!
