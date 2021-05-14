@@ -1,4 +1,4 @@
 # Ignore the powerpoint slides directory
-#Slides/
+Slides/
 
-#*.pptx
+*.pptx
