@@ -1,7 +1,5 @@
 hostname R2
-!
-line console 0
- logging-sync 45 0
+
 !
 no ip domain-lookup
 !

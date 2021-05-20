@@ -1,0 +1,7 @@
+router ospf OSPF-1
+ router-id 2.2.2.2
+ address-family ipv4 unicast
+ area 2
+  interface GigabitEthernet0/0/0/0.26
+  !
+  interface GigabitEthernet0/0/0/0.212

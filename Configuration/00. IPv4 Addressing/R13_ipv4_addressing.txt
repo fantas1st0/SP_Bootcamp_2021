@@ -1,7 +1,8 @@
 hostname R13
 !
 line console 0
- logging-sync 45 0
+ logging sync 
+ exec-timeout 45 0
 !
 no ip domain-lookup
 !

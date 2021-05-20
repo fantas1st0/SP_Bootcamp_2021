@@ -1,0 +1,18 @@
+router ospf 1
+ prefix-priority high route-map RMAP_LSA-OSPF
+ fast-reroute per-prefix enable prefix-priority high
+ fast-reroute per-prefix tie-break srlg index 10
+ fast-reroute per-prefix tie-break node-protecting index 20
+ fast-reroute keep-all-paths
+!
+ip prefix-list PL_LFA-HIGH seq 5 permit 0.0.0.0/0 le 32
+!
+route-map RMAP_LSA-OSPF permit 10
+ match ip address prefix-list PL_LFA-HIGH
+
+interface Gi1.59
+ srlg gid 100
+interface Gi1.95
+ srlg gid 100
+interface Gi1.159
+ srlg gid 200
