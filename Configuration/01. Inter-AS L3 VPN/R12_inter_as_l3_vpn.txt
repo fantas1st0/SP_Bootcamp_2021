@@ -1,0 +1,4 @@
+router bgp 300
+ bgp router-id 12.12.12.12
+ neighbor 172.2.12.2 remote-as 2
+ network 112.112.112.112 mask 255.255.255.255

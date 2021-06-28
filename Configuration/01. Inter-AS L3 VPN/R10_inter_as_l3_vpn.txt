@@ -1,0 +1,8 @@
+router isis ISIS
+ net 49.0001.0000.0000.0010.00
+ metric-style wide
+!
+interface Loopback0
+ ip router isis ISIS
+interface Gi1.610
+ ip router isis ISIS

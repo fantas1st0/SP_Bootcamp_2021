@@ -1,0 +1,25 @@
+router isis ISIS
+ is-type level-2-only
+ net 49.0000.0000.0000.0006.00
+ address-family ipv4 unicast
+  metric-style wide
+ !
+ interface Loopback0
+  address-family ipv4 unicast
+ interface GigabitEthernet0/0/0/0.26
+  address-family ipv4 unicast
+ interface GigabitEthernet0/0/0/0.67
+  address-family ipv4 unicast
+ interface GigabitEthernet0/0/0/0.610
+  address-family ipv4 unicast
+!
+mpls ldp
+ router-id 2.2.2.2
+ address-family ipv4
+ !
+ interface GigabitEthernet0/0/0/0.26
+  address-family ipv4
+ interface GigabitEthernet0/0/0/0.67
+  address-family ipv4
+ interface GigabitEthernet0/0/0/0.610
+  address-family ipv4

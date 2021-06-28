@@ -1,0 +1,15 @@
+router ospf 1
+ router-id 1.1.1.1
+!
+interface Loopback0
+ ip ospf 1 area 0
+interface Gi1.15
+ ip ospf 1 area 0
+ mpls ip
+!
+router bgp 1
+ no bgp default ipv4-unicast
+ bgp router-id 1.1.1.1
+ address-family ipv4 vrf VRF_RED
+  neighbor 172.1.11.11 remote-as 200
+  neighbor 172.1.11.11 activate

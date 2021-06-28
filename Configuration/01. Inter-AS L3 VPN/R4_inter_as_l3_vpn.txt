@@ -1,0 +1,8 @@
+router ospf 1
+ router-id 4.4.4.4
+!
+interface Loopback0
+ ip ospf 1 area 0
+interface Gi1.45
+ ip ospf 1 area 0
+ mpls ip
